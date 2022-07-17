@@ -1,5 +1,8 @@
 import './App.css';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+
 import Navbar from './components/Navbar/Navbar';
+
 
 function App() {
   // const imagen = <img src="url" alt="imagen" />
@@ -15,6 +18,7 @@ function App() {
         {imagen}
       </header> */}
       <Navbar />
+      <ItemListContainer greeting={' La saludación'}/>
     </div>
   );
 }
