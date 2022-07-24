@@ -10,7 +10,7 @@ const CartWidget = () => {
         focusable="false"
         data-prefix="fas"
         data-icon="shopping-cart"
-        class="w-4"
+        className="w-4"
         role="img"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 576 512"
