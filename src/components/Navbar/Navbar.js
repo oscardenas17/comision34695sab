@@ -12,9 +12,9 @@ const Navbar = () => {
                     <h1 className='text-2xl text-white pr-2 font-semibold'>Ecommerce</h1>
                 </div>
                 <div>
-                    <button className='px-2'>Celulares</button>
-                    <button className='px-2'>Tablets</button>
-                    <button className='px-2'>Notebooks</button>
+                    <button className='px-2'>Desayunos Sorpresa</button>
+                    <button className='px-2'>Decoraciones</button>
+                    <button className='px-2'>Peluches</button>
                 </div>
 
                 <CartWidget/>

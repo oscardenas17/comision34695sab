@@ -18,14 +18,17 @@ const decrement = () => {
 
 
   return (
-    <div className="grid grid-cols-3 container mx-auto">
+<>
+<div className="flex items-center justify-center  mx-auto w-3/$">
+      {/* <div className="grid grid-cols-2 content-center mx-auto w-3/$"> */}
+ 
 
-       {/* Card */}
+  
       <div className="  content-center mt-6 p-5 max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-
+  
 
           <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            Desayuno Sorpresa
+            Desafio contador con boton
           </h5>
 
           <img src="https://i.imgur.com/5v22Iv6.jpeg" alt="" />
@@ -93,6 +96,7 @@ const decrement = () => {
 
 
     </div>
+    </>
     //Fin contenedor
   );
 };

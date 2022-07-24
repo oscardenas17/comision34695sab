@@ -8,7 +8,10 @@ import Navbar from './components/Navbar/Navbar';
 function App() {
   // const imagen = <img src="url" alt="imagen" />
 
-
+  const handleOnAddCart = (quantity) => {
+    console.log(`la cantidad agregada es: ${quantity}`)
+   
+  }
 
   return (
     <div className="App">
@@ -21,7 +24,7 @@ function App() {
         {imagen}
       </header> */}
       <Navbar />
-      <ItemListContainer greeting={' La saludación'}/>
+      <ItemListContainer greeting={' La saludación'} addCart={handleOnAddCart}/>
      
     </div>
   );
