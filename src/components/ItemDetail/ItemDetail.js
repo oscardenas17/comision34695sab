@@ -8,7 +8,7 @@ const ItemDetail = ({ name, description, price,img, }) => {
   };
 
   return (
-    <div className=" flex  items-center justify-center  mx-auto h-2/3 ">
+    <div className=" mt-24 flex  items-center justify-center  mx-auto h-2/3 ">
       {/* <div className="grid grid-cols-2 content-center mx-auto w-3/$"> */}
 
       <div className="  content-center mt-4 p-5 w-9/12  bg-white rounded-lg border border-gray-200
@@ -17,10 +17,13 @@ const ItemDetail = ({ name, description, price,img, }) => {
           {name}
         </h5>
 
-        <div className="md:grid grid-cols-2 content-center ">
-          <img src={img} alt="" className=" w-3/4 shadow rounded max-w-full align-middle border-none mx-auto" />
-          <div>
-            <p className="p-2 mb-2">{description}</p>
+        <div className="md:grid grid-cols-2 content-center  ">
+          <div  className="w-4/5 m-auto bg-blue-500">
+          <img src={img} alt="" className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-115 duration-300 w-3/4 shadow rounded max-w-full align-middle border-none mx-auto" />
+          </div>
+         
+          <div className=" mt-12">
+            <p className="p-2 mb-2 text-lg ">{description}</p>
             <ItemCount stock={10} onAdd={handleOnAdd} />
           </div>
           <div><p className="p-1 text-center text-2xl ">$ {price}</p></div>

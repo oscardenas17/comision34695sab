@@ -15,7 +15,7 @@ const products = [
     category: "peluches",
     img: "https://minisocol.vtexassets.com/arquivos/ids/200058-600-600?v=637811266115500000&width=600&height=600&aspect=true",
     stock: 16,
-    description: "Peluche cerdito Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit est, praesentium consequatur ab dolorem explicabo blanditiis corporis ducimus nemo, atque obcaecati facilis excepturi porro maxime beatae recusandae inventore expedita eius.",
+    description: "Peluche quince años Lorem ipsum sss dolor sit amet, consectetur adipisicing elit. Suscipit est, praesentium consequatur ab dolorem explicabo blanditiis corporis ducimus nemo, atque obcaecati facilis excepturi porro maxime beatae recusandae inventore expedita eius.",
   },
   {
     id: "3",
