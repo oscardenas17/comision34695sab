@@ -5,12 +5,6 @@
 
 [![Build Status](https://img.restaurantguru.com/rcbe-dishes-Sorprende-con-dulzura-Teledesayunos.jpg)]
 
-Dillinger is a cloud-enabled, mobile-ready, offline-storage compatible,
-AngularJS-powered HTML5 Markdown editor.
-
-- Type some Markdown on the left
-- See HTML in the right
-- ✨Magic ✨
 
 ## Instalación local
 
@@ -23,8 +17,7 @@ AngularJS-powered HTML5 Markdown editor.
 
 ## Rutas definidas
 
-Dillinger is currently extended with the following plugins.
-Instructions on how to use them in your own application are linked below.
+
 
 | URL | COMENTARIO |
 | ------ | ------ |
