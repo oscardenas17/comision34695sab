@@ -7,7 +7,7 @@ const Item = ( {id, name, img, price, stock,description} ) => {
   return (
     <div className=" mt-12 m-2 max-h-full">
     <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">
-      <div className="py-3 px-6 border-b border-gray-300 h-16">
+      <div className="py-3 px-6 border-b border-gray-300 h-16 text-lg">
         {name}
       </div>
       <div className="p-4">
