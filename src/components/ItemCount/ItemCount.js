@@ -19,7 +19,6 @@ const ItemCount = ({ onAdd }) => {
     <>
       {/* elements botones */}
       <div className=" flex w-2/4 justify-center mx-auto mt-4">
-
         <button
           onClick={decrement}
           className=" flex items-center justify-center  mt-2  text-sm   text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  flex-auto md:w-1/4"
@@ -42,11 +41,8 @@ const ItemCount = ({ onAdd }) => {
           {/* <p className="ml-2"> Quitar </p> */}
         </button>
 
-
         <div className=" flex-auto  m-2 border-2 rounded  items-center justify-center ">
-          <p className="text-lg text-center">
-            {count}
-          </p>
+          <p className="text-lg text-center">{count}</p>
         </div>
 
         <button
@@ -69,7 +65,6 @@ const ItemCount = ({ onAdd }) => {
             ></path>
           </svg>
           {/* <p  className="ml-2">Añadir</p> */}
-         
         </button>
       </div>
 

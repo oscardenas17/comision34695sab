@@ -6,11 +6,6 @@ import Navbar from "./components/Navbar/Navbar";
 
 
 function App() {
-  // const imagen = <img src="url" alt="imagen" />
-
-  // const handleOnAdd = (quantity) => {
-  //   console.log(`la cantidad agregada es: ${quantity}`);
-  // };
 
   return (
     <div className="App"> 
