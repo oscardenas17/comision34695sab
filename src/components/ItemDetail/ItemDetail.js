@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import ItemCount from "../../components/ItemCount/ItemCount";
+import CartContext from "../../context/CartContext";
 
-const ItemDetail = ({ name, description, price, img }) => {
-  const [cantidad, setCantidad] = useState(0);
+
+const ItemDetail = ({ id, name, description, price, img, stock }) => {
+  const [cantidadAgregar, setCantidadAgregar] = useState(0);
+
+  const {addItem} = useContext(CartContext)
+
 
   const handleOnAdd = (quantity) => {
-    setCantidad(quantity);
+    setCantidadAgregar(quantity);
+
+    const productoToAdd = {
+      id, name, price, quantity
+    } 
+   
+    addItem(productoToAdd) //Ira como objeto para el carrito
+
   };
 
   return (
@@ -18,7 +29,7 @@ const ItemDetail = ({ name, description, price, img }) => {
       >
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">
           {name}
-        </h5>
+        </h5>  
 
         <div className="md:grid grid-cols-2 content-center  ">
 
@@ -32,8 +43,8 @@ const ItemDetail = ({ name, description, price, img }) => {
 
           <section className=" mt-12">
             <p className="p-2  text-lg ">{description}</p>
-            {cantidad === 0 ? (
-              <ItemCount stock={10} onAdd={handleOnAdd} />
+            {cantidadAgregar === 0 ? (
+              <ItemCount stock={stock} onAdd={handleOnAdd} />
             ) : (
               <div className="flex justify-center">
                 {" "}
@@ -45,7 +56,7 @@ const ItemDetail = ({ name, description, price, img }) => {
                 </Link>{" "}
               </div>
             )}
-
+         
             <div>
               <p className="p-1 text-center text-2xl mt-4">$ {price}</p>
             </div>

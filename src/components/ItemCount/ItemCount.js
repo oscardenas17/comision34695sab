@@ -17,6 +17,7 @@ const ItemCount = ({ onAdd }) => {
 
   return (
     <>
+      
       {/* elements botones */}
       <div className=" flex w-2/4 justify-center mx-auto mt-4">
         <button
