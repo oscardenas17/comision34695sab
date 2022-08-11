@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "../../components/ItemCount/ItemCount";
 import CartContext from "../../context/CartContext";
@@ -7,7 +7,7 @@ import CartContext from "../../context/CartContext";
 const ItemDetail = ({ id, name, description, price, img, stock }) => {
   const [cantidadAgregar, setCantidadAgregar] = useState(0);
 
-  const {addItem} = useContext(CartContext)
+  const {addItem, getProductQuantity } = useContext(CartContext)
 
 
   const handleOnAdd = (quantity) => {
@@ -21,6 +21,8 @@ const ItemDetail = ({ id, name, description, price, img, stock }) => {
 
   };
 
+   const productQuantity = getProductQuantity(id)
+    
   return (
     <div className=" mt-24 flex  items-center justify-center  mx-auto h-2/3 ">
       <div
@@ -44,16 +46,16 @@ const ItemDetail = ({ id, name, description, price, img, stock }) => {
           <section className=" mt-12">
             <p className="p-2  text-lg ">{description}</p>
             {cantidadAgregar === 0 ? (
-              <ItemCount stock={stock} onAdd={handleOnAdd} />
+              <ItemCount onAdd={handleOnAdd}  stock={stock} initial={productQuantity}   />
             ) : (
               <div className="flex justify-center">
-                {" "}
+                
                 <Link
                   to="/cart"
                   className="text-center text-white rounded-lg  bg-green-700  hover:bg-green-800 p-2 mt-3 w-2/4	 text-base transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
                 >
                   FInalizar Compra{" "}
-                </Link>{" "}
+                </Link>
               </div>
             )}
          

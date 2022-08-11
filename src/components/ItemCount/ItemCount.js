@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
-const ItemCount = ({ onAdd }) => {
-  const [count, setCount] = useState(1);
+const ItemCount = ({  initial=1  , stock=0, onAdd }) => {
+  const [count, setCount] = useState(initial);
 
   const increment = () => {
-    if (count < 10) {
+    if (count < stock) {
       setCount(count + 1);
     }
   };
@@ -71,7 +71,7 @@ const ItemCount = ({ onAdd }) => {
 
       <div className="flex justify-center">
         <button
-          onClick={() => onAdd(count)}
+          onClick={() => onAdd(count) }
           className="text-white rounded-lg  bg-green-700  hover:bg-green-800 p-2 mt-3 w-2/4	 text-base transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
         >
           Agregar al carrito
