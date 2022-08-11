@@ -18,7 +18,7 @@ const ItemListContainer = ({ greeting }) => {
         console.log(error)
     })
     // if(!categoryId) {
-    //     getProductsDeAlfredo().then(products => {
+    //     getProducts().then(products => {
     //         setProducts(products)
     //     })
     // } else {

@@ -1,9 +1,14 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 
-const Item = ( {id, name, img, price, stock,description} ) => {
 
+
+
+const Item = ( {id, name, img, price, stock,description} ) => {
   // const {name, description, img, stock, price} = product
+
+
+
   return (
     <div className=" mt-12 m-2 max-h-full">
     <div className="block rounded-lg shadow-lg bg-white max-w-sm text-center">

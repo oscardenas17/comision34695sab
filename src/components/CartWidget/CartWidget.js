@@ -1,10 +1,17 @@
-import React from "react";
+import { useContext } from "react";
+import CartContext from "../../context/CartContext";
+
+
 
 const CartWidget = () => {
+
+  const {getQuantity} = useContext(CartContext)
+  const cantidad= getQuantity()
+
   return (
     <>
     <div className="flex ">
-    <p className="p-1">0</p>
+    {cantidad}
     <svg
         aria-hidden="true"
         focusable="false"

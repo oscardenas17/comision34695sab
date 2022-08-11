@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
-const ItemCount = ({ onAdd }) => {
-  const [count, setCount] = useState(1);
+const ItemCount = ({  initial=1  , stock=0, onAdd }) => {
+  const [count, setCount] = useState(initial);
 
   const increment = () => {
-    if (count < 10) {
+    if (count < stock) {
       setCount(count + 1);
     }
   };
@@ -17,9 +17,9 @@ const ItemCount = ({ onAdd }) => {
 
   return (
     <>
+      
       {/* elements botones */}
-      <div className=" flex w-2/4 justify-center mx-auto">
-
+      <div className=" flex w-2/4 justify-center mx-auto mt-4">
         <button
           onClick={decrement}
           className=" flex items-center justify-center  mt-2  text-sm   text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800  flex-auto md:w-1/4"
@@ -42,11 +42,8 @@ const ItemCount = ({ onAdd }) => {
           {/* <p className="ml-2"> Quitar </p> */}
         </button>
 
-
         <div className=" flex-auto  m-2 border-2 rounded  items-center justify-center ">
-          <p className="text-lg text-center">
-            {count}
-          </p>
+          <p className="text-lg text-center">{count}</p>
         </div>
 
         <button
@@ -69,13 +66,12 @@ const ItemCount = ({ onAdd }) => {
             ></path>
           </svg>
           {/* <p  className="ml-2">Añadir</p> */}
-         
         </button>
       </div>
 
       <div className="flex justify-center">
         <button
-          onClick={() => onAdd(count)}
+          onClick={() => onAdd(count) }
           className="text-white rounded-lg  bg-green-700  hover:bg-green-800 p-2 mt-3 w-2/4	 text-base transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300"
         >
           Agregar al carrito
