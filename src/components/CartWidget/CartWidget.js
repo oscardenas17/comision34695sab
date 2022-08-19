@@ -7,7 +7,7 @@ const CartWidget = () => {
   const cantidad = getQuantity();
 
   return (
-    cantidad > 0 &&(
+    cantidad > 0 && (
       <Link to="/cart">
         <div className="flex ">
           {cantidad}
@@ -27,8 +27,8 @@ const CartWidget = () => {
             ></path>
           </svg>
         </div>
-      </Link>)
-  
+      </Link>
+    )
   );
 };
 
