@@ -10,14 +10,18 @@ const ItemDetailContainer = () => {
   const [loading, setLoading] = useState(true);
 
   const { productId } = useParams();
+ 
+
+
 
   useEffect(() => {
     setLoading(true);
 
     getDoc(doc(db, "products", productId))
       .then((res) => {
+        //console.log('item',productId);
         const data = res.data();
-        const productoConvertido = { id: data.id, ...data };
+        const productoConvertido = { id: res.id, ...data };
         setProduct(productoConvertido);
       })
       .catch((error) => {

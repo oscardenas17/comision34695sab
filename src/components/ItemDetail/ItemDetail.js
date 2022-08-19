@@ -6,7 +6,7 @@ import CartContext from "../../context/CartContext";
 
 const ItemDetail = ({ id, name, description, price, img, stock }) => {
   const [cantidadAgregar, setCantidadAgregar] = useState(0);
-
+console.log(id);
   const {addItem, getProductQuantity } = useContext(CartContext)
 
 
@@ -14,15 +14,16 @@ const ItemDetail = ({ id, name, description, price, img, stock }) => {
     setCantidadAgregar(quantity);
 
     const productoToAdd = {
-      id, name, price, quantity
+      id, name, price, quantity, img
     } 
+  
    
     addItem(productoToAdd) //Ira como objeto para el carrito
 
   };
 
    const productQuantity = getProductQuantity(id)
-    
+   
   return (
     <div className=" mt-24 flex  items-center justify-center  mx-auto h-2/3 ">
       <div
