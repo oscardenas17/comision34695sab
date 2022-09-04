@@ -4,6 +4,7 @@ import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../services/firebase";
+import Alerta from "../Alert/Alerta";
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
@@ -45,16 +46,20 @@ const ItemListContainer = ({ greeting }) => {
   }, [categoryId]);
 
   if (loading) {
-    return <p> Cargando </p>;
+    return     <Alerta
+    alerta={'Cargando Productos... no demoramos¡'}
+  />;
   }
 
   return (
     <>
-      <h2 className="text-center font-bold text-2xl mt-2">
+      <h2 className="text-center font-bold text-2xl mt-2 ">
         {` ${greeting} ${categoryId || ""} `}{" "}
       </h2>
-
+      <div className="">
       <ItemList products={products} />
+      </div>
+     
     </>
   );
 };

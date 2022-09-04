@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import CartContext from "../../context/CartContext";
 
 const CartWidget = () => {
-  const { getQuantity } = useContext(CartContext);
-  const cantidad = getQuantity();
+  const { obtenerCantidad } = useContext(CartContext);
+  const cantidad = obtenerCantidad();
 
   return (
     cantidad > 0 && (

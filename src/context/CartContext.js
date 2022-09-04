@@ -4,10 +4,9 @@ const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  // console.log(cart)
 
-  const addItem = (productToAdd) => {
-    if (!isInCart(productToAdd.id)) {
+  const agregarItem = (productToAdd) => {
+    if (!productoEnCarro(productToAdd.id)) {
       setCart([...cart, productToAdd]);
     } else {
       const cartUpdated = cart.map((prod) => {
@@ -27,54 +26,53 @@ export const CartContextProvider = ({ children }) => {
   };
 
   //Limpar array
-  const clearCart = () => {
+  const limpiarCarrito = () => {
     setCart([]);
   };
 
   //ELIMINAR ITEM
-  const removeItem = id => {
-    const newCartRemove = cart.filter( prod => prod.id !== id);
+  const eliminarProducto = (id) => {
+    const newCartRemove = cart.filter((prod) => prod.id !== id);
     setCart(newCartRemove);
   };
 
   //RETORNA TRUE O FALSE CON SOME
-  const isInCart = id => {
+  const productoEnCarro = (id) => {
     return cart.some((prod) => prod.id === id);
   };
 
-  const getQuantity = () => {
+  const obtenerCantidad = () => {
     let acumulado = 0;
-    cart.forEach( prod => {
+    cart.forEach((prod) => {
       acumulado += prod.quantity;
     });
     return acumulado;
   };
 
-  const getProductQuantity = (id) => {
-    const product = cart.find(prod => prod.id === id);
-    return product?.quantity;  // ? si existe en procut el item quiantity lo muestra
+  const obtenerCantidadPructo = (id) => {
+    const product = cart.find((prod) => prod.id === id);
+    return product?.quantity; // ? si existe en procut el item quiantity lo muestra
   };
 
-  const totalPay = () => {
+  const totalPago = () => {
     let precioTotal = 0;
-    cart.forEach(prod => {
-        precioTotal += parseInt(prod.price) * prod.quantity
-        console.warn(precioTotal)
-    })
-    return precioTotal
-}
+    cart.forEach((prod) => {
+      precioTotal += parseInt(prod.price) * prod.quantity;
+    });
+    return precioTotal;
+  };
 
   return (
     <CartContext.Provider
-      value={{ 
+      value={{
         cart,
-        addItem,
-        getQuantity,
-        isInCart,
-        removeItem,
-        clearCart,
-        getProductQuantity,
-        totalPay
+        agregarItem,
+        obtenerCantidad,
+        productoEnCarro,
+        eliminarProducto,
+        limpiarCarrito,
+        obtenerCantidadPructo,
+        totalPago,
       }}
     >
       {children}
