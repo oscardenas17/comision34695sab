@@ -6,7 +6,7 @@ const ItemList = ({ products }) => {
     <>
       <hr className="m-3" />
 
-      <div className=" container justify-between flex-col lg:flex-row flex mx-auto ">
+      <div className=" container justify-between flex-col lg:flex-row flex mx-auto h-2">
         {products.map((prod) => (
           <Item key={prod.id} {...prod} />
         ))}

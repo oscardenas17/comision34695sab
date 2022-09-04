@@ -3,9 +3,6 @@
 
 
 
-[![Build Status](https://img.restaurantguru.com/rcbe-dishes-Sorprende-con-dulzura-Teledesayunos.jpg)]
-
-
 ## Instalación local
 
 ```sh
@@ -24,9 +21,12 @@
 | "/" | Página de inicio que muestra el listado de productos (ItemListContainer). |
 |/category/:category| Filtra según categorías existentes (Categorias seleccionables en el menú)  |
 |detail/:id |  Detalle del producto seleccionado (Botón ver detalle producto) |
+|/cart|  Muestra los productos añadidos en el carrito de compras) |
+|/checkout|  Muestra los productos añadidos en el carrito de compras para finalizar la compra) |
 
 
-
+##  	❤️ 	🙌 ✨
+![Watch the video](https://i.imgur.com/Opz8S9U.gif)
 
 ## License
 
